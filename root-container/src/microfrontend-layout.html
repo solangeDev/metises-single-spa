@@ -1,0 +1,42 @@
+<single-spa-router>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- Example layouts you might find helpful:
+
+  <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route>
+
+  -->
+
+  <main>
+    <route default>
+      <div class="dashboard">
+        <div class="header-container">
+          <application name="@timg/ms-header"></application>
+        </div>
+        <div class="left-bar-container">
+          <application name="@timg/ms-left-bar"></application>
+        </div>
+        <div class="main-container">
+          <application name="@timg/ms-main"></application> 
+          <application name="@timg/ms-city"></application>
+        </div>
+        <div class="right-bar-container">
+          <application name="@timg/ms-right-bar"></application>
+        </div>
+        <div class="footer-container">
+          <application name="@timg/ms-footer"></application>
+        </div>
+      </div>
+    </route>
+  </main>
+</single-spa-router>
