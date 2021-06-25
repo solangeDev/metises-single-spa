@@ -1,0 +1,260 @@
+<ng-sidebar-container
+  class="sidebar sidebarLeft"
+  [ngClass]="{ sidebarLeft__unexpanded: !_opened }"
+>
+  <!-- A sidebar -->
+  <ng-sidebar
+    [(opened)]="_opened"
+    mode="slide"
+    [dock]="true"
+    [dockedSize]="'60px'"
+  >
+    <div class="sidebarLeft__menu">
+      <div class="sidebarLeft__toggle sidebarLeft__buttonToggle">
+        <button (click)="_toggleSidebar()">
+          <i nz-icon nz-icon nzType="left" nzTheme="outline"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Menu Cerrado -->
+    <div
+      class="sidebarLeft__menuUnexpanded"
+      [ngClass]="{ sidebarLeft__hide: _opened }"
+    >
+      <img
+        class="
+          sidebarLeft__iconSvg
+          sidebarLeft__animatedSwing
+          sidebarLeft__animatedSwingInfinite
+        "
+        src="http://localhost:4203/assets/images/crown.svg"
+        alt="crown"
+      />
+      <img
+        class="
+          sidebarLeft__iconSvg
+          sidebarLeft__animatedSwing
+          sidebarLeft__animatedSwingInfinite
+        "
+        src="http://localhost:4203/assets/images/store-svgrepo-com.svg"
+        alt=""
+      />
+      <img
+        class="
+          sidebarLeft__iconSvg
+          sidebarLeft__animatedSwing
+          sidebarLeft__animatedSwingInfinite
+        "
+        src="http://localhost:4203/assets/images/delivery-truck.svg"
+        alt=""
+      />
+      <img
+        class="
+          sidebarLeft__iconSvg
+          sidebarLeft__animatedSwing
+          sidebarLeft__animatedSwingInfinite
+        "
+        src="http://localhost:4203/assets/images/time-is-money.svg"
+      />
+    </div>
+    <div
+      class="sidebarLeft__containerMenu"
+      [ngClass]="{ sidebarLeft__hide: !_opened }"
+    >
+      <div class="sidebarLeft__headerAvatar">
+        <div
+          class="
+            sidebarLeft__avatar
+            animate__animated animate__backInLeft
+            sidebarLeft__animatedPulseInfinite
+          "
+        >
+          <img
+            src="http://localhost:4203/assets/images/perfil-del-usuario.svg"
+            alt="avatar"
+          />
+        </div>
+        <div class="sidebarLeft__leftBar">
+          <div class="animate__animated animate__backInDown">
+            <img
+              class="
+                sidebarLeft__animatedPulse sidebarLeft__animatedPulseInfinite
+              "
+              src="http://localhost:4203/assets/images/logo.svg"
+              alt="logo"
+            />
+          </div>
+          <div class="animate__animated animate__backInLeft">
+            <img
+              class="sidebarLeft__iconSvg sidebarLeft__animatedPulseInfinite"
+              src="http://localhost:4203/assets/images/crown.svg"
+              alt="crown"
+            />
+          </div>
+          <div
+            class="
+              sidebarLeft__rankingTitle
+              animate__animated animate__backInDown
+            "
+          >
+            <span class="sidebarLeft__animatedrubberBand">Ranking</span>
+          </div>
+          <div class="sidebarLeft__ranking">
+            <div
+              class="
+                sidebarLeft__rankingText
+                animate__animated animate__backInLeft
+              "
+            >
+              5/10
+            </div>
+            <div class="animate__animated animate__backInDown">
+              <img
+                class="sidebarLeft__iconUp sidebarLeft__animatedPulseInfinite"
+                src="http://localhost:4203/assets/images/willpower.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebarLeft__bodyMenu animate__animated animate__fadeIn">
+        <nz-progress
+          nzStatus="active"
+          class="sidebarLeft__progresBar"
+          nzStrokeColor="#575fcf"
+          [nzStrokeWidth]="16"
+          [nzPercent]="30"
+        ></nz-progress>
+      </div>
+      <div class="sidebarLeft__titleBody animate__animated animate__fadeIn">
+        En curso
+      </div>
+      <div class="sidebarLeft__menuItem">
+        <div class="animate__animated animate__backInLeft">
+          <img
+            class="
+              sidebarLeft__iconSvg
+              sidebarLeft__animatedPulse
+              sidebarLeft__animatedSwingInfinite
+            "
+            src="http://localhost:4203/assets/images/store-svgrepo-com.svg"
+            alt=""
+          />
+        </div>
+        <div
+          class="sidebarLeft__itemTitle animate__animated animate__backInLeft"
+        >
+          Creando Warehouse
+        </div>
+        <div
+          class="sidebarLeft__itemValue animate__animated animate__fadeInRight"
+        >
+          <span class="sidebarLeft__animatedSwing sidebarLeft__animatedShakeY"
+            >9/10</span
+          >
+        </div>
+      </div>
+      <div class="sidebarLeft__menuItem">
+        <div class="animate__animated animate__backInLeft">
+          <img
+            class="
+              sidebarLeft__iconSvg
+              sidebarLeft__animatedPulse
+              sidebarLeft__animatedSwingInfinite
+            "
+            src="http://localhost:4203/assets/images/delivery-truck.svg"
+            alt=""
+          />
+        </div>
+        <div
+          class="sidebarLeft__itemTitle animate__animated animate__backInLeft"
+        >
+          Despacho
+        </div>
+        <div
+          class="sidebarLeft__itemValue animate__animated animate__fadeInRight"
+        >
+          <img
+            class="
+              sidebarLeft__iconSvg
+              sidebarLeft__animatedSwing
+              sidebarLeft__animatedSwingInfinite
+            "
+            src="http://localhost:4203/assets/images/time-is-money.svg"
+          />
+        </div>
+      </div>
+      <div class="sidebarLeft__menuItem">
+        <div class="animate__animated animate__backInLeft">
+          <img
+            class="
+              sidebarLeft__iconSvg
+              sidebarLeft__animatedPulse
+              sidebarLeft__animatedSwingInfinite
+            "
+            src="http://localhost:4203/assets/images/chest-svgrepo-com.svg"
+            alt=""
+          />
+        </div>
+        <div
+          class="sidebarLeft__itemTitle animate__animated animate__backInLeft"
+        >
+          Pedido
+          <span
+            class="animate__animated animate__fadeInRight sidebarLeft__number"
+            >#14</span
+          >
+        </div>
+        <div
+          class="sidebarLeft__itemValue animate__animated animate__fadeInRight"
+        >
+          <article
+            class="sidebarLeft__animatedPulse sidebarLeft__animatedShakeY"
+          >
+            <nz-progress
+              [nzWidth]="50"
+              nzType="dashboard"
+              [nzPercent]="100"
+              [nzStrokeColor]="{ '0%': '#108ee9', '100%': '#87d068' }"
+            ></nz-progress>
+          </article>
+        </div>
+      </div>
+      <footer class="sidebarLeft__footer">
+        <div class="animate__animated animate__fadeInLeft">
+          <img
+            class="
+              sidebarLeft__iconSvg
+              sidebarLeft__animatedPulse
+              sidebarLeft__animatedSwingInfinite
+            "
+            src="http://localhost:4203/assets/images/online-game.png"
+            alt=""
+          />
+        </div>
+        <div class="animate__animated animate__fadeInRight">
+          <img
+            class="
+              sidebarLeft__iconSvg
+              sidebarLeft__animatedPulse
+              sidebarLeft__animatedSwingInfinite
+            "
+            src="http://localhost:4203/assets/images/map.png"
+            alt=""
+          />
+        </div>
+        <div class="animate__animated animate__fadeInRight">
+          <img
+            class="
+              sidebarLeft__iconSvg
+              sidebarLeft__animatedPulse
+              sidebarLeft__animatedSwingInfinite
+            "
+            src="http://localhost:4203/assets/images/treasure.png"
+            alt=""
+          />
+        </div>
+      </footer>
+    </div>
+  </ng-sidebar>
+</ng-sidebar-container>

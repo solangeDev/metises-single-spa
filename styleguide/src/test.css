@@ -1,0 +1,139 @@
+.dashboard {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 80px 1fr 80px;
+  grid-template-columns: max-content 1fr max-content;
+  overflow: hidden;
+}
+
+.dashboard .header-container {
+  grid-row: 1;
+  grid-column: 1 / 3;
+  background-color: aqua;
+}
+
+.dashboard .footer-container {
+  grid-row: 3 / 4;
+  grid-column: 2 / -1;
+  background-color: slateblue;
+}
+
+.dashboard .left-bar-container {
+  grid-row: 2 / -1;
+  grid-column: 1 / 2;
+  background-color: #232425;
+  border-right: 1px solid #b2bec3;
+}
+
+.dashboard .main-container {
+  height: calc(100vh - 160px);
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  background-color: white;
+}
+
+.dashboard .right-bar-container {
+  grid-row: 1 / 3;
+  grid-column: 3 / 4;
+  background-color: #232425;
+  border-left: 1px solid #b2bec3;
+}
+
+.dashboard .right-bar-container div:first-child{
+   /* height: 90vh; */
+ }
+
+
+ .ng-sidebar{
+   width: 100%;
+   overflow: hidden !important;
+ }
+
+.animated-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #f0c419;
+  color: white;
+  animation: bounceInfinite 1.5s ease-out infinite;
+}
+
+.carousel-cell img {
+  height: 60px !important;
+  padding: 10px 0 0 0;
+}
+
+.carousel-cell .animated-badge {
+  top: 20px !important;
+}
+
+@keyframes bounceInfinite {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* &__animatedrubberBand {
+    display: inline-block;
+
+    &:hover {
+      cursor: pointer;
+      animation: rubberBand;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+    }
+  }
+
+  &__animatedSwing {
+    display: inline-block;
+
+    &:hover {
+      cursor: pointer;
+      animation: swing;
+      animation-duration: 1s;
+      animation-iteration-count: 2;
+    }
+  }
+
+  &__animatedPulse {
+    &:hover {
+      cursor: pointer;
+      animation: pulse;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  &__animatedPulseInfinite {
+    animation: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  &__animatedSwingInfinite {
+    animation: swing;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  &__animatedShakeY {
+    animation: shakeY;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  } */

@@ -1,0 +1,193 @@
+<ng-sidebar-container
+  class="sidebarRight"
+  [ngClass]="{ sidebarRight__unexpanded: !_opened }"
+>
+  <ng-sidebar
+    [(opened)]="_opened"
+    mode="slide"
+    position="right"
+    [dock]="true"
+    [dockedSize]="'60px'"
+  >
+    <div class="sidebarRight__toggle sidebarRight__buttonToggle">
+      <button (click)="_toggleSidebar()">
+        <i nz-icon nz-icon nzType="right" nzTheme="outline"></i>
+      </button>
+    </div>
+    <div class="sidebarRight__containerMenu">
+      <!-- Menu cerrado -->
+      <div
+        class="sidebarRight__menuUnexpanded"
+        [ngClass]="{ sidebarRight__hide: _opened }"
+      >
+        <img
+          class="
+            sidebarRight__iconSvg
+            sidebarRight__animatedSwing
+            sidebarRight__animatedSwingInfinite
+          "
+          src="http://localhost:4203/assets/images/user.png"
+          alt="crown"
+        />
+        <img
+          class="
+            sidebarRight__iconSvg
+            sidebarRight__animatedSwing
+            sidebarRight__animatedSwingInfinite
+          "
+          src="http://localhost:4203/assets/images/settings.png"
+          alt=""
+        />
+        <img
+          class="
+            sidebarRight__iconSvg
+            sidebarRight__animatedSwing
+            sidebarRight__animatedSwingInfinite
+          "
+          src="http://localhost:4203/assets/images/bill.png"
+          alt=""
+        />
+        <img
+          class="
+            sidebarRight__iconSvg
+            sidebarRight__animatedSwing
+            sidebarRight__animatedSwingInfinite
+          "
+          src="http://localhost:4203/assets/images/box.svg"
+        />
+        <img
+          class="
+            sidebarRight__iconSvg
+            sidebarRight__animatedSwing
+            sidebarRight__animatedSwingInfinite
+          "
+          src="http://localhost:4203/assets/images/receipt.png"
+          alt=""
+        />
+      </div>
+      <div [ngClass]="{ sidebarRight__hide: !_opened }">
+        <div class="sidebarRight__title animate__animated animate__backInLeft">
+          Misiones
+        </div>
+        <article
+          class="sidebarRight__itemMenu animate__animated animate__backInLeft"
+        >
+          <div>
+            <img
+              class="
+                sidebarRight__iconSvg
+                sidebarRight__animatedSwing
+                sidebarRight__animatedSwingInfinite
+              "
+              src="http://localhost:4203/assets/images/user.png"
+              alt=""
+            />
+          </div>
+          <div class="sidebarRight__itemTitle2">
+            <div>Completa tu</div>
+            <div>perfil</div>
+          </div>
+          <div>
+            <button class="sidebarRight__itemButton" nz-button nzType="dashed">
+              Ir
+            </button>
+          </div>
+        </article>
+        <article
+          class="sidebarRight__itemMenu animate__animated animate__backInLeft"
+        >
+          <div class="sidebarRight__wrapperNotifi">
+            <span class="animated-badge">1</span>
+            <img
+              class="
+                sidebarRight__iconSvg
+                sidebarRight__animatedSwing
+                sidebarRight__animatedSwingInfinite
+              "
+              src="http://localhost:4203/assets/images/settings.png"
+              alt=""
+            />
+          </div>
+          <div class="sidebarRight__itemTitle">CRM</div>
+          <div>
+            <button class="sidebarRight__itemButton" nz-button nzType="dashed">
+              Ir
+            </button>
+          </div>
+        </article>
+        <article
+          class="sidebarRight__itemMenu animate__animated animate__backInLeft"
+        >
+          <div>
+            <img
+              class="
+                sidebarRight__iconSvg
+                sidebarRight__animatedSwing
+                sidebarRight__animatedSwingInfinite
+              "
+              src="http://localhost:4203/assets/images/bill.png"
+              alt=""
+            />
+          </div>
+          <div class="sidebarRight__itemTitle2">
+            <div>Crear Invoice</div>
+            <div>para pedido</div>
+          </div>
+          <div>
+            <button class="sidebarRight__itemButton" nz-button nzType="dashed">
+              Ir
+            </button>
+          </div>
+        </article>
+        <article
+          class="sidebarRight__itemMenu animate__animated animate__backInLeft"
+        >
+          <div>
+            <img
+              class="
+                sidebarRight__iconSvg
+                sidebarRight__animatedSwing
+                sidebarRight__animatedSwingInfinite
+              "
+              src="http://localhost:4203/assets/images/box.svg"
+              alt=""
+            />
+          </div>
+          <div class="sidebarRight__itemTitle2">
+            <div>Crear tu primer</div>
+            <div>pedido</div>
+          </div>
+          <div>
+            <button class="sidebarRight__itemButton" nz-button nzType="dashed">
+              Ir
+            </button>
+          </div>
+        </article>
+        <article
+          class="sidebarRight__itemMenu animate__animated animate__backInLeft"
+        >
+          <div>
+            <img
+              class="
+                sidebarRight__iconSvg
+                sidebarRight__animatedSwing
+                sidebarRight__animatedSwingInfinite
+              "
+              src="http://localhost:4203/assets/images/receipt.png"
+              alt=""
+            />
+          </div>
+          <div class="sidebarRight__itemTitle2">
+            <div>Crear Pedido</div>
+            <div class="sidebarRight__number">Factura #14</div>
+          </div>
+          <div>
+            <button class="sidebarRight__itemButton" nz-button nzType="dashed">
+              Ir
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </ng-sidebar>
+</ng-sidebar-container>

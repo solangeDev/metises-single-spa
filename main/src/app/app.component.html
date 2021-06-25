@@ -1,0 +1,60 @@
+<div class="main">
+  <div #welcome class="welcome animate__animated animate__fadeOut animate__delay-3s">
+      <p>
+          <span>b</span>
+          <span>i</span>
+          <span>e</span>
+          <span>n</span>
+          <span>v</span>
+          <span>e</span>
+          <span>n</span>
+          <span>i</span>
+          <span>d</span>
+          <span>o</span>
+          <span>a</span>
+      </p>
+      <p>
+          <span>m</span>
+          <span>e</span>
+          <span>t</span>
+          <span>i</span>
+          <span>s</span>
+          <span>e</span>
+          <span>s</span>
+      </p>
+  </div>
+  <div #cityWrapper class="city-wrapper" (mousedown)="mouseDownHandler($event)" (mousemove)="mouseMoveHandler($event)"
+       (mouseup)="mouseUpHandler($event)" (wheel)="mouseWheelHandler($event)">
+      <div #city class="city">
+          <a routerLink="/" class="link purchases animate__animated animate__fadeIn animate__delay-3s">
+              Compras
+              <span class="animated-badge">5</span>
+          </a>
+          <a routerLink="/" class="link crm animate__animated animate__fadeIn animate__delay-3s">
+              CRM
+              <span class="animated-badge">2</span>
+          </a>
+          <a routerLink="/" class="link warehouse animate__animated animate__fadeIn animate__delay-4s">
+              Almacén
+              <span class="animated-badge">6</span>
+          </a>
+          <a routerLink="/" class="link store animate__animated animate__fadeIn animate__delay-5s">
+              Tienda
+              <span class="animated-badge">1</span>
+          </a>
+          <a routerLink="/" class="link sales animate__animated animate__fadeIn animate__delay-2s">
+              Ventas
+              <span class="animated-badge">3</span>
+          </a>
+          <!-- <app-city></app-city> -->
+      </div>
+  </div>
+  <!--<div>
+    <p>main works!</p>
+    <button (click)="loadModule()">Load</button>
+    <a routerLink="/invoices/list">List</a>
+    <div class="dynamic-component">
+      <div #dynamicOutlet></div>
+    </div>
+  </div>-->
+</div>

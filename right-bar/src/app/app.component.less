@@ -1,0 +1,162 @@
+.sidebarRight {
+  width: 300px;
+  transition: width 200ms;
+  transition-timing-function: linear;
+  height: 90vh;
+  // position: relative;
+
+  &__hide {
+    display: none !important;
+  }
+
+  &__containerMenu {
+    padding: 50px 10px 20px;
+    overflow: hidden;
+  }
+
+  &__iconSvg {
+    width: 48px;
+    height: 48px;
+  }
+
+  &__itemButton {
+    color: #d2dae2 !important;
+    background: transparent !important;
+    width: 70px;
+
+    &:hover {
+      border-color: #ffdd59 !important;
+      color: #ffdd59 !important;
+    }
+  }
+
+  &__toggle {
+    > button {
+      color: #dfe4ea;
+      padding: 0;
+      border: inherit;
+      background: transparent;
+      outline: 0;
+    }
+
+    button:hover,
+    button:focus {
+      color: #4c9aff;
+    }
+
+    button:focus,
+    button:active {
+      border: inherit;
+      background: transparent;
+      outline: 0;
+    }
+  }
+
+  &__menuUnexpanded {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    gap: 30px;
+  }
+
+  &__unexpanded {
+    width: 60px;
+    transition: width 200ms;
+    transition-timing-function: linear;
+  }
+
+  &__buttonToggle {
+    position: absolute;
+    left: 0px;
+    top: 60%;
+
+    button {
+      cursor: pointer;
+    }
+  }
+
+  &__title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #d2dae2;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__itemMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 45px 11px 44.5px;
+    // position: relative;
+    // top: 128px;
+  }
+
+  &__itemTitle {
+    font-size: 15px;
+    color: #d2dae2;
+    font-weight: bold;
+    position: absolute;
+    left: 75px;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  &__itemTitle2 {
+    font-size: 15px;
+    color: #d2dae2;
+    font-weight: bold;
+    position: absolute;
+    left: 75px;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  &__animatedSwing {
+    display: inline-block;
+
+    &:hover {
+      cursor: pointer;
+      animation: swing;
+      animation-duration: 1s;
+      animation-iteration-count: 2;
+    }
+  }
+
+  &__animatedPulse {
+    &:hover {
+      cursor: pointer;
+      animation: pulse;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  &__animatedPulseInfinite {
+    animation: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  &__animatedSwingInfinite {
+    animation: swing;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  &__animatedShakeY {
+    animation: shakeY;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+}

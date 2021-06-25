@@ -1,0 +1,125 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "c53d637b-f259-4bf1-b9ec-82a38b900c89"
+  },
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "left-bar": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "less"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "options": {
+            "outputPath": "dist/left-bar",
+            "index": "src/index.html",
+            "main": "src/main.single-spa.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "less",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
+              "src/styles.less",
+              "node_modules/animate.css/animate.css"
+            ],
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "extra-webpack.config.js",
+              "libraryName": "left-bar",
+              "libraryTarget": "umd"
+            },
+            "deployUrl": "http://localhost:4200/"
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "none"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "outputHashing": "none"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-builders/custom-webpack:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "left-bar:build:production"
+            },
+            "development": {
+              "browserTarget": "left-bar:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "left-bar:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "inlineStyleLanguage": "less",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
+              "src/styles.less",
+              "node_modules/animate.css/animate.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "left-bar"
+}

@@ -1,0 +1,37 @@
+@dark-blue: #00001e;
+@pink: #f0f;
+@aqua: #0ff;
+
+.cityscape {
+  width: 1300px;
+
+  .lights-fade {
+    animation: fill 10s linear infinite;
+  }
+
+  .lights-fade-reverse {
+    animation: fill 10s linear reverse infinite;
+  }
+
+  @keyframes fill {
+    0% {
+      fill: @dark-blue;
+    }
+
+    33% {
+      fill: @pink;
+    }
+
+    50% {
+      fill: @dark-blue;
+    }
+
+    66% {
+      fill: @aqua;
+    }
+
+    100% {
+      fill: @dark-blue;
+    }
+  }
+}

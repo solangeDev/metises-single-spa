@@ -1,0 +1,261 @@
+
+.sidebarLeft {
+  width: 300px;
+  transition: width 200ms;
+  transition-timing-function: linear;
+  background-color: #232425;
+  height: 90vh;
+
+  &__containerMenu {
+    padding: 50px 10px 20px;
+    overflow: hidden;
+  }
+
+
+  &__menu {
+    overflow-y: hidden;
+    width: 300px;
+    background-color: #232425;
+  }
+
+  &__iconSvg {
+    width: 48px;
+    height: 48px;
+  }
+
+  &__hide {
+    display: none !important;
+  }
+
+  &__menu{
+    overflow-y: hidden;
+    width: 300px;
+    background-color: #232425;
+  }
+
+  &__menuUnexpanded {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0 5px 0 0;
+    gap: 55px;
+  }
+
+  &__visibility {
+    visibility: hidden;
+  }
+
+  &__menuItem {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 20px 5px;
+
+    div:first-child {
+      border-right: 2px solid #575fcf;
+      padding-right: 6px;
+    }
+
+    div:last-child {
+      padding-left: 3px;
+    }
+  }
+
+  &__number {
+    font-size: 16px;
+    color: #ffdd59;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__itemValue {
+    font-size: 18px;
+    color: #05c46b;
+    font-weight: bold;
+    transition: color 5s;
+  }
+
+  &__itemTitle {
+    font-size: 15px;
+    color: #d2dae2;
+    font-weight: bold;
+    position: absolute;
+    left: 66px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__unexpanded {
+    width: 60px;
+    transition: width 200ms;
+    transition-timing-function: linear;
+  }
+
+  &__headerAvatar {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__avatar {
+    display: flex;
+    justify-content: center;
+
+    img {
+      cursor: pointer;
+      width: 180px;
+      height: 180px;
+
+      &:hover {
+        animation: pulse;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+
+  &__buttonToggle {
+    position: absolute;
+    right: 0px;
+    top: 80%;
+
+    button {
+      cursor: pointer;
+    }
+  }
+
+  &__toggle {
+    > button {
+      color: #dfe4ea;
+      padding: 0;
+      border: inherit;
+      background: transparent;
+      outline: 0;
+    }
+
+    button:hover,
+    button:focus {
+      color: #4c9aff;
+    }
+
+    button:focus,
+    button:active {
+      border: inherit;
+      background: transparent;
+      outline: 0;
+    }
+  }
+
+  &__rankingTitle {
+    font-size: 14px;
+    color: #d2dae2;
+    font-weight: bold;
+    padding: 8px 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__leftBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__ranking {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+
+  &__iconUp {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__rankingText {
+    font-size: 16px;
+    font-weight: bold;
+    color: #38ada9;
+    text-align: center;
+  }
+
+  &__bodyMenu {
+    padding: 60px 0 0;
+  }
+
+  &__titleBody {
+    font-size: 25px;
+    font-weight: bold;
+    color: #d2dae2;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 35px 20px 0 0;
+  }
+
+  &__footer {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    // position: relative;
+  }
+
+  &__animatedSwing {
+    display: inline-block;
+
+    &:hover {
+      cursor: pointer;
+      animation: swing;
+      animation-duration: 1s;
+      animation-iteration-count: 2;
+    }
+  }
+
+  &__animatedPulse {
+    &:hover {
+      cursor: pointer;
+      animation: pulse;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  &__animatedPulseInfinite {
+    animation: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  &__animatedSwingInfinite {
+    animation: swing;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  &__animatedShakeY {
+    animation: shakeY;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+}

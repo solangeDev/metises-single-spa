@@ -1,0 +1,53 @@
+{
+  "name": "right-bar",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve --port 4203",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "build:single-spa:right-bar": "ng build right-bar --prod",
+    "serve:single-spa:right-bar": "ng s --project right-bar --disable-host-check --port 4200 --live-reload false"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~12.0.1",
+    "@angular/common": "~12.0.1",
+    "@angular/compiler": "~12.0.1",
+    "@angular/core": "~12.0.1",
+    "@angular/forms": "~12.0.1",
+    "@angular/platform-browser": "~12.0.1",
+    "@angular/platform-browser-dynamic": "~12.0.1",
+    "@angular/router": "~12.0.1",
+    "@ant-design/icons": "^4.6.2",
+    "@ant-design/icons-angular": "^11.0.1",
+    "angular-responsive-carousel": "^2.0.2",
+    "animate.css": "^4.1.1",
+    "animated": "^0.2.2",
+    "css": "^3.0.0",
+    "ng-sidebar": "^9.4.2",
+    "ng-zorro-antd": "^11.4.2",
+    "rxjs": "~6.6.0",
+    "single-spa": ">=4.0.0",
+    "single-spa-angular": "^5.0.1",
+    "tslib": "^2.1.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-builders/custom-webpack": "12.1.0",
+    "@angular-devkit/build-angular": "~12.0.1",
+    "@angular/cli": "~12.0.1",
+    "@angular/compiler-cli": "~12.0.1",
+    "@types/jasmine": "~3.6.0",
+    "@types/node": "^12.11.1",
+    "jasmine-core": "~3.7.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "typescript": "~4.2.3",
+    "webpack-bundle-analyzer": "^4.4.2"
+  }
+}
